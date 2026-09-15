@@ -219,6 +219,8 @@ def main():
 
             previous = state.get(key, {})
             previous_price = previous.get("price")
+            target_price = product.get("target_price")
+            target_already_alerted = previous.get("target_alerted", False)
 
             if previous_price is not None and current_price < previous_price:
                 drop = previous_price - current_price
@@ -235,10 +237,30 @@ def main():
             else:
                 print("  No drop.")
 
+            # Separate check: has it hit (or gone below) your target price?
+            # Only alerts once per crossing, so it won't spam you every 30 min.
+            target_hit_now = target_price is not None and current_price <= target_price
+
+            if target_hit_now and not target_already_alerted:
+                message = (
+                    f"🎯 Target price reached!\n\n"
+                    f"{name}\n"
+                    f"Current price: ₹{current_price} (your target: ₹{target_price})\n\n"
+                    f"{url}"
+                )
+                print("  Target price reached, sending Telegram alert.")
+                send_telegram_message(message)
+                target_already_alerted = True
+            elif not target_hit_now:
+                # Price is back above target, so reset — a future drop below
+                # target will alert again.
+                target_already_alerted = False
+
             state[key] = {
                 "name": name,
                 "price": current_price,
                 "last_checked": datetime.now(timezone.utc).isoformat(),
+                "target_alerted": target_already_alerted,
             }
 
             # small random delay between products, to look less bot-like
