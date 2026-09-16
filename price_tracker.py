@@ -171,16 +171,63 @@ def extract_price_flipkart(page):
     return None
 
 
+OUT_OF_STOCK_PHRASES = [
+    "currently unavailable",
+    "out of stock",
+    "sold out",
+    "coming soon",
+    "this item cannot be shipped",
+    "temporarily out of stock",
+    "notify me",
+]
+
+
+def is_out_of_stock(page, site):
+    """
+    Checks visible page text for common 'not buyable right now' phrases.
+    Amazon/Flipkart often keep the old price embedded in the page's data even
+    when the item is unavailable, so this check runs BEFORE we trust any
+    price we found.
+    """
+    try:
+        body_text = page.inner_text("body").lower()
+    except Exception:
+        return False
+
+    for phrase in OUT_OF_STOCK_PHRASES:
+        if phrase in body_text:
+            return True
+
+    if site == "amazon":
+        # Amazon shows a dedicated "Currently unavailable" block, and the
+        # normal Buy Now / Add to Cart buttons disappear when unavailable.
+        if page.query_selector("#outOfStock"):
+            return True
+        has_buy_button = page.query_selector("#buy-now-button") or page.query_selector(
+            "#add-to-cart-button"
+        )
+        if not has_buy_button:
+            # No purchase button found at all is a strong signal something's off,
+            # but pages can be slow to render, so this alone isn't conclusive —
+            # only treat it as out of stock combined with no price element below.
+            pass
+
+    return False
+
+
 def get_price(page, url, site):
     page.goto(url, wait_until="domcontentloaded", timeout=45000)
     # Flipkart especially needs a moment for JS to fill in price info
     page.wait_for_timeout(2500)
 
+    if is_out_of_stock(page, site):
+        return None, True  # (price, out_of_stock)
+
     if site == "amazon":
-        return extract_price_amazon(page)
+        return extract_price_amazon(page), False
     elif site == "flipkart":
-        return extract_price_flipkart(page)
-    return None
+        return extract_price_flipkart(page), False
+    return None, False
 
 
 def main():
@@ -204,10 +251,23 @@ def main():
 
             print(f"Checking: {name}")
             try:
-                current_price = get_price(page, url, site)
+                current_price, out_of_stock = get_price(page, url, site)
             except Exception as e:
                 print(f"  Error loading page: {e}")
-                current_price = None
+                current_price, out_of_stock = None, False
+
+            if out_of_stock:
+                print(f"  {name} is currently OUT OF STOCK — skipping price comparison.")
+                previous = state.get(key, {})
+                state[key] = {
+                    "name": name,
+                    "price": previous.get("price"),  # keep last known real price
+                    "last_checked": datetime.now(timezone.utc).isoformat(),
+                    "target_alerted": previous.get("target_alerted", False),
+                    "in_stock": False,
+                }
+                time.sleep(random.uniform(3, 6))
+                continue
 
             if current_price is None:
                 print(f"  Could not read price for {name} (site may have changed layout).")
@@ -261,6 +321,7 @@ def main():
                 "price": current_price,
                 "last_checked": datetime.now(timezone.utc).isoformat(),
                 "target_alerted": target_already_alerted,
+                "in_stock": True,
             }
 
             # small random delay between products, to look less bot-like
