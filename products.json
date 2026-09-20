@@ -1,27 +1,15 @@
 [
   {
-    "name": "ASUS Vivobook S16 (S3607CA-SH071WS)",
-    "url": "https://www.flipkart.com/asus-vivobook-s16-2025-office-2024-m365-basic-metal-body-intel-core-ultra-5-225h-16-gb-512-gb-ssd-windows-11-home-s3607ca-sh071ws-thin-light-laptop/p/itm038f39f4a1473",
-    "site": "flipkart",
-    "target_price": 90000
-  },
-  {
-    "name": "ASUS Vivobook S16 OLED (B0FC2M5CGL)",
-    "url": "https://www.amazon.in/dp/B0FC2M5CGL",
-    "site": "amazon",
-    "target_price": 90000
-  },
-  {
     "name": "Motorola Motobook 60 Pro (Wedgewood)",
     "url": "https://www.flipkart.com/motorola-motobook-60-pro-full-metal-oled-ai-pc-intel-core-ultra-5-225-h-16-gb-512-gb-ssd-windows-11-home-83ny000din-thin-light-laptop/p/itm4668d847910ea",
     "site": "flipkart",
-    "target_price": 90000
+    "target_price": 80000
   },
   {
     "name": "Motorola Motobook 60 Pro (Bronze Green)",
     "url": "https://www.flipkart.com/motorola-motobook-60-pro-full-metal-ai-pc-2-8k-oled-intel-core-ultra-5-225h-16-gb-512-gb-ssd-windows-11-home-14iah10-thin-light-laptop/p/itm58b168bff5710",
     "site": "flipkart",
-    "target_price": 90000
+    "target_price": 80000
   },
   {
     "name": "HP OmniBook 7 Aero (B0F1DFSLBH)",
@@ -36,21 +24,33 @@
     "target_price": 80000
   },
   {
-    "name": "ASUS Vivobook S16 (B0BSH7J6SG)",
-    "url": "https://www.amazon.in/dp/B0BSH7J6SG",
-    "site": "amazon",
-    "target_price": 85000
-  },
-  {
-    "name": "ASUS Vivobook S16 (S3607CA-RP065WS)",
-    "url": "https://www.flipkart.com/asus-vivobook-s16-2025-office-2024-m365-basic-metal-body-intel-core-ultra-5-225h-16-gb-512-gb-ssd-windows-11-home-s3607ca-rp065ws-thin-light-laptop/p/itma7224a66e9e87",
+    "name": "Motorola Motobook 60 Pro Ultra 7 255H (itm59cdb71a3e82b)",
+    "url": "https://www.flipkart.com/motorola-motobook-60-pro-full-metal-oled-ai-pc-intel-core-ultra-7-255-h-32-gb-1-tb-ssd-windows-11-home-14iah101-thin-light-laptop/p/itm59cdb71a3e82b",
     "site": "flipkart",
-    "target_price": 85000
+    "target_price": 95000
   },
   {
-    "name": "ASUS Vivobook S16 2026 (B0GGRLL9NH)",
-    "url": "https://www.amazon.in/dp/B0GGRLL9NH",
+    "name": "Motorola Motobook 60 Pro Ultra 7 255H (itmccc84b3ebdc70)",
+    "url": "https://www.flipkart.com/motorola-motobook-60-pro-full-metal-ai-pc-2-8k-oled-intel-core-ultra-7-255-h-32-gb-1-tb-ssd-windows-11-home-14iah10-thin-light-laptop/p/itmccc84b3ebdc70",
+    "site": "flipkart",
+    "target_price": 95000
+  },
+  {
+    "name": "ASUS Vivobook S16 OLED - Amazon (B0FC2M5CGL)",
+    "url": "https://www.amazon.in/dp/B0FC2M5CGL",
     "site": "amazon",
-    "target_price": 85000
+    "target_price": 80000
+  },
+  {
+    "name": "ASUS Vivobook S16 OLED - Flipkart (itm038f39f4a1473)",
+    "url": "https://www.flipkart.com/asus-vivobook-s16-2025-office-2024-m365-basic-metal-body-intel-core-ultra-5-225h-16-gb-512-gb-ssd-windows-11-home-s3607ca-sh071ws-thin-light-laptop/p/itm038f39f4a1473",
+    "site": "flipkart",
+    "target_price": 80000
+  },
+  {
+    "name": "ASUS Vivobook S16 OLED - ASUS Official Store",
+    "url": "https://in.store.asus.com/ai-powered-light-weight-laptop-asus-vivobook-s16-s3607ca-sh071ws.html",
+    "site": "other",
+    "target_price": 80000
   }
 ]
