@@ -36,6 +36,12 @@ USER_AGENT = (
     "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 )
 
+# Minimum drop (in rupees) before a general "Price drop!" alert is sent.
+# Small wobbles (₹50-500) happen often due to rounding/regional pricing and
+# aren't usually worth an alert. This does NOT affect target-price alerts,
+# which always fire the moment a product hits its target.
+MIN_DROP_ALERT_THRESHOLD = 2000
+
 
 def load_json(path, default):
     if path.exists():
@@ -151,14 +157,16 @@ def extract_price_amazon(page):
     return None
 
 
-def extract_price_flipkart(page):
+def extract_price_generic(page):
+    """
+    Generic price reader for any site that isn't Amazon or Flipkart (e.g. a
+    brand's own official store). Tries meta/JSON-LD first, then falls back
+    to scanning visible text for a rupee amount.
+    """
     price = extract_price_from_meta_or_jsonld(page)
     if price:
         return price
 
-    # Fallback: Flipkart's CSS classes are randomly hashed and change often,
-    # so as a last resort scan visible text for a rupee amount near the top
-    # of the page.
     try:
         body_text = page.inner_text("body")
     except Exception:
@@ -169,6 +177,10 @@ def extract_price_flipkart(page):
         # Usually the first ₹ amount on the page is the current price
         return clean_price_to_int(matches[0])
     return None
+
+
+def extract_price_flipkart(page):
+    return extract_price_generic(page)
 
 
 OUT_OF_STOCK_PHRASES = [
@@ -227,7 +239,10 @@ def get_price(page, url, site):
         return extract_price_amazon(page), False
     elif site == "flipkart":
         return extract_price_flipkart(page), False
-    return None, False
+    else:
+        # Any other site (e.g. a brand's own official store) uses the
+        # generic reader: meta/JSON-LD first, then a text-scan fallback.
+        return extract_price_generic(page), False
 
 
 def main():
@@ -284,14 +299,17 @@ def main():
 
             if previous_price is not None and current_price < previous_price:
                 drop = previous_price - current_price
-                message = (
-                    f"🔻 Price drop!\n\n"
-                    f"{name}\n"
-                    f"₹{previous_price} → ₹{current_price} (down ₹{drop})\n\n"
-                    f"{url}"
-                )
-                print("  Price dropped, sending Telegram alert.")
-                send_telegram_message(message)
+                if drop >= MIN_DROP_ALERT_THRESHOLD:
+                    message = (
+                        f"🔻 Price drop!\n\n"
+                        f"{name}\n"
+                        f"₹{previous_price} → ₹{current_price} (down ₹{drop})\n\n"
+                        f"{url}"
+                    )
+                    print(f"  Price dropped by ₹{drop}, sending Telegram alert.")
+                    send_telegram_message(message)
+                else:
+                    print(f"  Price dropped by only ₹{drop} (below ₹{MIN_DROP_ALERT_THRESHOLD} threshold), not alerting.")
             elif previous_price is None:
                 print("  First time seeing this product, no comparison to make yet.")
             else:
