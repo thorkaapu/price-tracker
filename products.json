@@ -52,5 +52,17 @@
     "url": "https://in.store.asus.com/ai-powered-light-weight-laptop-asus-vivobook-s16-s3607ca-sh071ws.html",
     "site": "other",
     "target_price": 80000
+  },
+  {
+    "name": "ASUS Zenbook 14 OLED 2025 (UX3405CA-PZ162WS)",
+    "url": "https://www.flipkart.com/asus-zenbook-14-oled-2025-touch-screen-backlit-keyboard-full-metal-body-intel-core-ultra-5-225h-16-gb-1-tb-ssd-windows-11-home-ux3405ca-pz162ws-thin-light-laptop/p/itm1d4c7b12b6187",
+    "site": "flipkart",
+    "target_price": 99000
+  },
+  {
+    "name": "ASUS Zenbook 14 OLED 2025 (UX3405CA-PZ345WS)",
+    "url": "https://www.flipkart.com/asus-zenbook-14-oled-2025-touch-screen-backlit-keyboard-full-metal-body-intel-core-ultra-5-225h-16-gb-1-tb-ssd-windows-11-home-ux3405ca-pz345ws-thin-light-laptop/p/itm7247031999b45",
+    "site": "flipkart",
+    "target_price": 99000
   }
 ]
