@@ -2,28 +2,28 @@
   "https://www.flipkart.com/asus-vivobook-s16-2025-office-2024-m365-basic-metal-body-intel-core-ultra-5-225h-16-gb-512-gb-ssd-windows-11-home-s3607ca-sh071ws-thin-light-laptop/p/itm038f39f4a1473": {
     "name": "ASUS Vivobook S16 OLED - Flipkart (itm038f39f4a1473)",
     "price": 107499,
-    "last_checked": "2026-09-20T21:30:16.047878+00:00",
+    "last_checked": "2026-09-20T23:27:43.193088+00:00",
     "target_alerted": false,
     "in_stock": true
   },
   "https://www.flipkart.com/motorola-motobook-60-pro-full-metal-oled-ai-pc-intel-core-ultra-5-225-h-16-gb-512-gb-ssd-windows-11-home-83ny000din-thin-light-laptop/p/itm4668d847910ea": {
     "name": "Motorola Motobook 60 Pro (Wedgewood)",
     "price": 94990,
-    "last_checked": "2026-09-20T18:59:10.880044+00:00",
+    "last_checked": "2026-09-20T23:26:42.457136+00:00",
     "target_alerted": false,
     "in_stock": true
   },
   "https://www.flipkart.com/motorola-motobook-60-pro-full-metal-ai-pc-2-8k-oled-intel-core-ultra-5-225h-16-gb-512-gb-ssd-windows-11-home-14iah10-thin-light-laptop/p/itm58b168bff5710": {
     "name": "Motorola Motobook 60 Pro (Bronze Green)",
     "price": 94990,
-    "last_checked": "2026-09-20T18:59:20.929418+00:00",
+    "last_checked": "2026-09-20T23:26:52.962301+00:00",
     "target_alerted": false,
     "in_stock": true
   },
   "https://www.flipkart.com/hp-omnibook-7-aero-previously-pavilion-aero-amd-ryzen-ai-octa-core-350-16-gb-512-gb-ssd-windows-11-home-13-bg1456au-thin-light-laptop/p/itm0e77f01f6fad1": {
     "name": "HP OmniBook 7 Aero (13-bg1456AU)",
     "price": 106308,
-    "last_checked": "2026-09-20T21:29:44.149713+00:00",
+    "last_checked": "2026-09-20T23:27:09.074806+00:00",
     "target_alerted": false,
     "in_stock": true
   },
@@ -65,29 +65,29 @@
   "https://www.flipkart.com/motorola-motobook-60-pro-full-metal-oled-ai-pc-intel-core-ultra-7-255-h-32-gb-1-tb-ssd-windows-11-home-14iah101-thin-light-laptop/p/itm59cdb71a3e82b": {
     "name": "Motorola Motobook 60 Pro Ultra 7 255H (itm59cdb71a3e82b)",
     "price": 132890,
-    "last_checked": "2026-09-20T21:29:54.411911+00:00",
+    "last_checked": "2026-09-20T23:27:17.990468+00:00",
     "target_alerted": false,
     "in_stock": true
   },
   "https://www.flipkart.com/motorola-motobook-60-pro-full-metal-ai-pc-2-8k-oled-intel-core-ultra-7-255-h-32-gb-1-tb-ssd-windows-11-home-14iah10-thin-light-laptop/p/itmccc84b3ebdc70": {
     "name": "Motorola Motobook 60 Pro Ultra 7 255H (itmccc84b3ebdc70)",
     "price": 132890,
-    "last_checked": "2026-09-20T21:30:01.565209+00:00",
+    "last_checked": "2026-09-20T23:27:27.777430+00:00",
     "target_alerted": false,
     "in_stock": true
   },
   "https://www.flipkart.com/asus-zenbook-14-oled-2025-touch-screen-backlit-keyboard-full-metal-body-intel-core-ultra-5-225h-16-gb-1-tb-ssd-windows-11-home-ux3405ca-pz162ws-thin-light-laptop/p/itm1d4c7b12b6187": {
     "name": "ASUS Zenbook 14 OLED 2025 (UX3405CA-PZ162WS)",
     "price": 122991,
-    "last_checked": "2026-09-20T21:30:33.764505+00:00",
+    "last_checked": "2026-09-20T23:27:59.468707+00:00",
     "target_alerted": false,
-    "in_stock": true
+    "in_stock": false
   },
   "https://www.flipkart.com/asus-zenbook-14-oled-2025-touch-screen-backlit-keyboard-full-metal-body-intel-core-ultra-5-225h-16-gb-1-tb-ssd-windows-11-home-ux3405ca-pz345ws-thin-light-laptop/p/itm7247031999b45": {
     "name": "ASUS Zenbook 14 OLED 2025 (UX3405CA-PZ345WS)",
     "price": 127990,
-    "last_checked": "2026-09-20T21:30:43.649805+00:00",
+    "last_checked": "2026-09-20T23:28:08.247435+00:00",
     "target_alerted": false,
-    "in_stock": true
+    "in_stock": false
   }
 }
