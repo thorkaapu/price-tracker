@@ -1,68 +1,42 @@
-[
-  {
-    "name": "Motorola Motobook 60 Pro (Wedgewood)",
-    "url": "https://www.flipkart.com/motorola-motobook-60-pro-full-metal-oled-ai-pc-intel-core-ultra-5-225-h-16-gb-512-gb-ssd-windows-11-home-83ny000din-thin-light-laptop/p/itm4668d847910ea",
-    "site": "flipkart",
-    "target_price": 90000
-  },
-  {
-    "name": "Motorola Motobook 60 Pro (Bronze Green)",
-    "url": "https://www.flipkart.com/motorola-motobook-60-pro-full-metal-ai-pc-2-8k-oled-intel-core-ultra-5-225h-16-gb-512-gb-ssd-windows-11-home-14iah10-thin-light-laptop/p/itm58b168bff5710",
-    "site": "flipkart",
-    "target_price": 90000
-  },
-  {
-    "name": "HP OmniBook 7 Aero (B0F1DFSLBH)",
-    "url": "https://www.amazon.in/dp/B0F1DFSLBH",
-    "site": "amazon",
-    "target_price": 90000
-  },
-  {
-    "name": "HP OmniBook 7 Aero (13-bg1456AU)",
-    "url": "https://www.flipkart.com/hp-omnibook-7-aero-previously-pavilion-aero-amd-ryzen-ai-octa-core-350-16-gb-512-gb-ssd-windows-11-home-13-bg1456au-thin-light-laptop/p/itm0e77f01f6fad1",
-    "site": "flipkart",
-    "target_price": 90000
-  },
-  {
-    "name": "Motorola Motobook 60 Pro Ultra 7 255H (itm59cdb71a3e82b)",
-    "url": "https://www.flipkart.com/motorola-motobook-60-pro-full-metal-oled-ai-pc-intel-core-ultra-7-255-h-32-gb-1-tb-ssd-windows-11-home-14iah101-thin-light-laptop/p/itm59cdb71a3e82b",
-    "site": "flipkart",
-    "target_price": 95000
-  },
-  {
-    "name": "Motorola Motobook 60 Pro Ultra 7 255H (itmccc84b3ebdc70)",
-    "url": "https://www.flipkart.com/motorola-motobook-60-pro-full-metal-ai-pc-2-8k-oled-intel-core-ultra-7-255-h-32-gb-1-tb-ssd-windows-11-home-14iah10-thin-light-laptop/p/itmccc84b3ebdc70",
-    "site": "flipkart",
-    "target_price": 95000
-  },
-  {
-    "name": "ASUS Vivobook S16 OLED - Amazon (B0FC2M5CGL)",
-    "url": "https://www.amazon.in/dp/B0FC2M5CGL",
-    "site": "amazon",
-    "target_price": 82000
-  },
-  {
-    "name": "ASUS Vivobook S16 OLED - Flipkart (itm038f39f4a1473)",
-    "url": "https://www.flipkart.com/asus-vivobook-s16-2025-office-2024-m365-basic-metal-body-intel-core-ultra-5-225h-16-gb-512-gb-ssd-windows-11-home-s3607ca-sh071ws-thin-light-laptop/p/itm038f39f4a1473",
-    "site": "flipkart",
-    "target_price": 82000
-  },
-  {
-    "name": "ASUS Vivobook S16 OLED - ASUS Official Store",
-    "url": "https://in.store.asus.com/ai-powered-light-weight-laptop-asus-vivobook-s16-s3607ca-sh071ws.html",
-    "site": "other",
-    "target_price": 82000
-  },
-  {
-    "name": "ASUS Zenbook 14 OLED 2025 (UX3405CA-PZ162WS)",
-    "url": "https://www.flipkart.com/asus-zenbook-14-oled-2025-touch-screen-backlit-keyboard-full-metal-body-intel-core-ultra-5-225h-16-gb-1-tb-ssd-windows-11-home-ux3405ca-pz162ws-thin-light-laptop/p/itm1d4c7b12b6187",
-    "site": "flipkart",
-    "target_price": 99000
-  },
-  {
-    "name": "ASUS Zenbook 14 OLED 2025 (UX3405CA-PZ345WS)",
-    "url": "https://www.flipkart.com/asus-zenbook-14-oled-2025-touch-screen-backlit-keyboard-full-metal-body-intel-core-ultra-5-225h-16-gb-1-tb-ssd-windows-11-home-ux3405ca-pz345ws-thin-light-laptop/p/itm7247031999b45",
-    "site": "flipkart",
-    "target_price": 99000
-  }
-]
+name: Track prices
+
+on:
+  schedule:
+    # Runs every 30 minutes, all day and night. Times are in UTC.
+    - cron: "*/30 * * * *"
+  workflow_dispatch: {}   # lets you also trigger it manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  check-prices:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Playwright browser
+        run: python -m playwright install --with-deps chromium
+
+      - name: Run price tracker
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python price_tracker.py
+
+      - name: Save updated prices back to the repo
+        run: |
+          git config user.name "price-tracker-bot"
+          git config user.email "actions@github.com"
+          git add last_prices.json
+          git diff --quiet --cached || git commit -m "Update tracked prices"
+          git push
