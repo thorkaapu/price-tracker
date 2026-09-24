@@ -2,7 +2,7 @@
   "https://www.flipkart.com/asus-vivobook-s16-2025-office-2024-m365-basic-metal-body-intel-core-ultra-5-225h-16-gb-512-gb-ssd-windows-11-home-s3607ca-sh071ws-thin-light-laptop/p/itm038f39f4a1473": {
     "name": "ASUS Vivobook S16 S3607CA-SH071WS - Flipkart",
     "price": 107499,
-    "last_checked": "2026-09-23T18:36:30.685171+00:00",
+    "last_checked": "2026-09-24T00:48:18.740707+00:00",
     "target_alerted": false,
     "in_stock": true
   },
@@ -16,7 +16,7 @@
   "https://www.flipkart.com/motorola-motobook-60-pro-full-metal-ai-pc-2-8k-oled-intel-core-ultra-5-225h-16-gb-512-gb-ssd-windows-11-home-14iah10-thin-light-laptop/p/itm58b168bff5710": {
     "name": "Motobook 60 Pro (Bronze Green)",
     "price": 94990,
-    "last_checked": "2026-09-23T14:23:39.248120+00:00",
+    "last_checked": "2026-09-24T00:47:56.887837+00:00",
     "target_alerted": false,
     "in_stock": true
   },
@@ -93,16 +93,16 @@
   "https://www.flipkart.com/motorola-motobook-60-pro-full-metal-ai-pc-2-8k-oled-intel-core-ultra-5-225h-16-gb-512-gb-ssd-windows-11-home-83ny000din-thin-light-laptop/p/itm4668d847910ea": {
     "name": "Motobook 60 Pro (Wedgewood)",
     "price": 94990,
-    "last_checked": "2026-09-23T14:23:29.493664+00:00",
+    "last_checked": "2026-09-24T00:47:49.537296+00:00",
     "target_alerted": false,
     "in_stock": true
   },
   "https://www.vijaysales.com/p/259460/asus-vivobook-s16-ai-powered-light-weight-laptop-intel-core-ultra-5-225h-16gb-ram-512gb-ssd-16-inch-40-64-cm-oled-fhd-display-intel-graphics-windows-11-ms-office-s3607ca-sh071ws": {
     "name": "ASUS Vivobook S16 S3607CA-SH071WS - Vijay Sales",
     "price": 126990,
-    "last_checked": "2026-09-23T22:12:49.700044+00:00",
+    "last_checked": "2026-09-24T00:48:37.987063+00:00",
     "target_alerted": false,
-    "in_stock": true
+    "in_stock": false
   },
   "https://www.amazon.in/dp/B0DSHTHR67": {
     "name": "ASUS Zenbook 14 OLED UX3405CA-PZ162WS - Amazon",
@@ -121,28 +121,28 @@
   "https://www.flipkart.com/asus-zenbook-14-2025-touch-screen-mso-2024-m365-basic-ai-boost-13-npu-tops-intel-core-ultra-5-225h-16-gb-1-tb-ssd-windows-11-home-ux3405ca-ql1014ws-thin-light-laptop/p/itm6a6f840fcd278": {
     "name": "ASUS Zenbook 14 OLED UX3405CA-QL1014WS - Flipkart",
     "price": 122500,
-    "last_checked": "2026-09-23T22:13:21.047278+00:00",
+    "last_checked": "2026-09-24T00:49:03.437909+00:00",
     "target_alerted": false,
     "in_stock": true
   },
   "https://www.flipkart.com/asus-zenbook-14-2025-touch-screen-mso-2024-m365-basic-ai-boost-13-npu-tops-intel-core-ultra-5-225h-16-gb-1-tb-ssd-windows-11-home-ux3405ca-ql1111ws-thin-light-laptop/p/itmc2101b678eab9": {
     "name": "ASUS Zenbook 14 OLED UX3405CA-QL1111WS - Flipkart",
     "price": 131869,
-    "last_checked": "2026-09-23T22:13:30.197364+00:00",
+    "last_checked": "2026-09-24T00:49:11.873096+00:00",
     "target_alerted": false,
     "in_stock": true
   },
   "https://www.vijaysales.com/p/237961/asus-zenbook-14-laptop-intel-core-ultra-5-16gb-lpddr5x-ram-1tb-ssd-14-inch-35-56-cm-oled-display-intel-arc-graphics-backlit-chiclet-keyboard-win-11-ms-office-x1607ca-mb142ws": {
     "name": "ASUS Zenbook 14 OLED - Vijay Sales",
     "price": null,
-    "last_checked": "2026-09-23T22:13:43.230825+00:00",
+    "last_checked": "2026-09-24T00:49:24.473187+00:00",
     "target_alerted": false,
     "in_stock": false
   },
   "https://www.hp.com/in-en/shop/products/laptops/hp-omnibook-7-laptop-ai-14-fr0789tu-c58rfpa-acj": {
     "name": "HP OmniBook 7 14-fr0789TU - HP Store",
     "price": 13999900,
-    "last_checked": "2026-09-23T22:14:02.187946+00:00",
+    "last_checked": "2026-09-24T00:49:42.918323+00:00",
     "target_alerted": false,
     "in_stock": true
   },
@@ -156,7 +156,7 @@
   "https://www.vijaysales.com/p/245496/hp-omnibook-7-ai-laptop-intel-core-ultra-5-225h-16gb-ram-1tb-ssd-14-inch-35-56-cm-diagonal-3k-oled-display-intel-arc-130t-gpu-windows-11-14-fr0789tu": {
     "name": "HP OmniBook 7 14-fr0789TU - Vijay Sales",
     "price": null,
-    "last_checked": "2026-09-23T22:14:30.032803+00:00",
+    "last_checked": "2026-09-24T00:50:08.646837+00:00",
     "target_alerted": false,
     "in_stock": false
   },
@@ -184,14 +184,14 @@
   "https://www.vijaysales.com/p/240157/lenovo-ideapad-slim-5-14akp10-thin-light-laptop-amd-ryzen-7-24gb-ddr5-ram-1tb-ssd-14-inch-35-56-cm-oled-display-amd-radeontm-860m-graphics-windows-11-ms-office-83hx0052in": {
     "name": "Lenovo IdeaPad Slim 5 14AKP10 - Vijay Sales",
     "price": null,
-    "last_checked": "2026-09-23T22:15:14.256391+00:00",
+    "last_checked": "2026-09-24T00:50:47.465982+00:00",
     "target_alerted": false,
     "in_stock": false
   },
   "https://www.flipkart.com/hi/lenovo-ideapad-slim-5-wuxga-oled-copilot-pc-full-metal-body-amd-ryzen-ai-7-octa-core-350-24-gb-1-tb-ssd-windows-11-home-14akp10-thin-light-laptop/p/itm078f4ceaf6192": {
     "name": "Lenovo IdeaPad Slim 5 14AKP10 - Flipkart",
     "price": 92990,
-    "last_checked": "2026-09-23T22:15:29.866140+00:00",
+    "last_checked": "2026-09-24T00:51:02.668607+00:00",
     "target_alerted": false,
     "in_stock": true
   },
