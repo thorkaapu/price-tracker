@@ -65,14 +65,14 @@
   "https://www.hp.com/in-en/shop/products/laptops/hp-omnibook-7-laptop-ai-14-fr0789tu-c58rfpa-acj": {
     "name": "HP OmniBook 7 14-fr0789TU - HP Store",
     "price": 13999900,
-    "last_checked": "2026-11-17T14:14:04.635073+00:00",
+    "last_checked": "2026-11-17T22:35:13.800970+00:00",
     "target_alerted": false,
     "in_stock": true
   },
   "https://www.amazon.in/dp/B0FP5NF7KR": {
     "name": "HP OmniBook 7 14-fr0789TU - Amazon",
     "price": null,
-    "last_checked": "2026-11-17T14:14:13.219492+00:00",
+    "last_checked": "2026-11-17T22:35:22.499296+00:00",
     "target_alerted": false,
     "in_stock": false
   },
@@ -86,21 +86,21 @@
   "https://www.amazon.in/dp/B0FMRSPKY6": {
     "name": "ASUS Vivobook S14 AMD Ryzen AI 7 350 - Amazon",
     "price": null,
-    "last_checked": "2026-11-17T14:14:20.817478+00:00",
+    "last_checked": "2026-11-17T22:35:32.052543+00:00",
     "target_alerted": false,
     "in_stock": false
   },
   "https://www.amazon.in/dp/B0H7C7K3JX": {
     "name": "Lenovo IdeaPad Slim 5 AI 7 350 - Amazon (B0H7C7K3JX)",
     "price": 99990,
-    "last_checked": "2026-11-17T14:14:29.138602+00:00",
+    "last_checked": "2026-11-17T22:35:42.173887+00:00",
     "target_alerted": false,
     "in_stock": false
   },
   "https://www.amazon.in/dp/B0GSVMFC9Z": {
     "name": "Lenovo IdeaPad Slim 5 AI 7 350 - Amazon (B0GSVMFC9Z)",
     "price": 92990,
-    "last_checked": "2026-11-16T13:03:31.892740+00:00",
+    "last_checked": "2026-11-17T22:35:50.353730+00:00",
     "target_alerted": false,
     "in_stock": false
   },
@@ -121,21 +121,21 @@
   "https://www.amazon.in/dp/B0DSHWKNZG": {
     "name": "ASUS Zenbook 14 OLED UX3405CA-PZ345WS - Amazon",
     "price": 124990,
-    "last_checked": "2026-11-16T04:24:37.048859+00:00",
+    "last_checked": "2026-11-17T22:34:50.286680+00:00",
     "target_alerted": false,
     "in_stock": false
   },
   "https://www.amazon.in/dp/B0FC2M5CGL": {
     "name": "ASUS Vivobook S16 S3607CA-SH071WS - Amazon",
     "price": null,
-    "last_checked": "2026-11-17T14:13:06.429291+00:00",
+    "last_checked": "2026-11-17T22:34:17.292678+00:00",
     "target_alerted": false,
     "in_stock": false
   },
   "https://www.amazon.in/dp/B0DSHTHR67": {
     "name": "ASUS Zenbook 14 OLED UX3405CA-PZ162WS - Amazon",
     "price": null,
-    "last_checked": "2026-11-13T21:47:43.592046+00:00",
+    "last_checked": "2026-11-17T22:34:41.091572+00:00",
     "target_alerted": false,
     "in_stock": false
   }
