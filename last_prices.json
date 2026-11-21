@@ -64,9 +64,9 @@
   },
   "https://www.hp.com/in-en/shop/products/laptops/hp-omnibook-7-laptop-ai-14-fr0789tu-c58rfpa-acj": {
     "name": "HP OmniBook 7 14-fr0789TU - HP Store",
-    "price": 7000,
-    "last_checked": "2026-11-21T07:33:38.378532+00:00",
-    "target_alerted": true,
+    "price": 13299904,
+    "last_checked": "2026-11-21T15:54:31.694209+00:00",
+    "target_alerted": false,
     "in_stock": true
   },
   "https://www.amazon.in/dp/B0FP5NF7KR": {
@@ -128,7 +128,7 @@
   "https://www.amazon.in/dp/B0FC2M5CGL": {
     "name": "ASUS Vivobook S16 S3607CA-SH071WS - Amazon",
     "price": null,
-    "last_checked": "2026-11-21T00:06:51.874268+00:00",
+    "last_checked": "2026-11-21T15:53:36.140171+00:00",
     "target_alerted": false,
     "in_stock": false
   },
